@@ -1,5 +1,4 @@
 package Dispositivo;
-import java.util.*;
 
 public class Dispositivo {
 	private boolean encendido;
@@ -49,25 +48,25 @@ public class Dispositivo {
 				Util.report("Encendiendo dispositivo "+nombre);
 			}
 		}else {
+			Util.report("No hay electricidad");
 			this.encendido = false;
 		}
 	}
 	public void cortarLuz() {
 		if(electricidad == true) {
 			this.electricidad = false;
-			this.encender();
 		}else {
 			this.electricidad = true;
 		}
 	}
 	
 	public void danar() {
-		this.dano = true;
-		Util.report("Dispositivo "+nombre+" danado");
+		this.dano = dano+25;
+		Util.report("Dispositivo "+nombre+" danado en"+dano+"%");
 	}
 	
 	public void reparar() {
-		this.dano = false;
+		this.dano = 0;
 		Util.report("Dispositivo "+nombre+" reparado");
 	}
 	
@@ -77,8 +76,13 @@ public class Dispositivo {
 	}
 	
 	public void limpiar() {
-		this.sucio = false;
-		Util.report("Dispositivo "+nombre+" limpio");
+		if(this.sucio == false) {
+			Util.report("Dispositivo "+nombre+" no ocupa limpieza");
+		}
+		else {
+			this.sucio = false;
+			Util.report("Dispositivo "+nombre+" limpio");
+		}
 	}
 
 }
