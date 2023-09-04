@@ -3,9 +3,9 @@ package Dispositivo;
 public class CoffeeMaker extends Dispositivo{
 	
 	private Refrigerador refri;
-	public CoffeeMaker() {
+	public CoffeeMaker(Refrigerador ref) {
 		super("Cafetera");
-		this.refri = refri;
+		this.refri = ref;
 	}
 	
 	private boolean Agua;

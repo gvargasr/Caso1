@@ -7,9 +7,9 @@ public class Televisor extends Dispositivo{
 	private int volumen;
 	private String canal;
 	
-	public Televisor() {
+	public Televisor(boolean inter) {
 			super("Radio de la casa");
-			this.internet = false;
+			this.internet = inter;
 			this.volumen = 0;
 		}
 			

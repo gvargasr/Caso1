@@ -7,9 +7,9 @@ public class Radio extends Dispositivo{
 	private int volumen;
 	private String cancion;
 	
-	public Radio() {
+	public Radio(boolean inter) {
 		super("Radio de la casa");
-		this.internet = false;
+		this.internet = inter;
 		this.volumen = 0;
 	}
 	
